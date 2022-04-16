@@ -1,0 +1,15 @@
+.title {
+  font-size: 36px;
+}
+
+.dark {
+  background-color: slategray;
+}
+
+.light {
+  background-color: #eaeaea;
+}
+
+.yellow {
+  background-color: yellow;
+}
