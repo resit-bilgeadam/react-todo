@@ -1,9 +1,11 @@
 import "./Button.css";
 
-function Button(props) {
+function Button({ children, handleClick, color = "primary", type = "button" }) {
+  const classes = `btn ${color}`;
+
   return (
-    <button type={props.type} className="btn" onClick={props.handleClick}>
-      {props.children}
+    <button type={type} className={classes} onClick={handleClick}>
+      {children}
     </button>
   );
 }

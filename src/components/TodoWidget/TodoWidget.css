@@ -21,3 +21,20 @@
   font-weight: normal;
   font-size: 21px;
 }
+
+.card-actions {
+  margin-top: 15px;
+}
+
+.card-message {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: crimson;
+}

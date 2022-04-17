@@ -24,12 +24,28 @@ const initialTodos = [
   },
 ];
 
-function TodoItem({ todo }) {
+function TodoItem({ todo, onDelete, onToggle }) {
+  const messageClass = todo.isCompleted ? "success" : "error";
+
   return (
     <div className="card">
       <h6 className="card-title">{todo.title}</h6>
 
       <p>{todo.text}</p>
+
+      <p className={`card-message ${messageClass}`}>
+        {todo.isCompleted ? "Completed" : "Not Completed!"}
+      </p>
+
+      <div className="card-actions">
+        <Button color="danger" handleClick={() => onDelete(todo.id)}>
+          Delete
+        </Button>
+
+        <Button color="secondary" handleClick={() => onToggle(todo.id)}>
+          Toggle Completed
+        </Button>
+      </div>
     </div>
   );
 }
@@ -47,6 +63,23 @@ function TodoWidget() {
     };
 
     setTodos([...todos, newTodo]);
+    event.target.reset();
+  };
+
+  const deleteTodo = (todoId) => {
+    const filteredTodos = todos.filter((todo) => todo.id !== todoId);
+
+    setTodos(filteredTodos);
+  };
+
+  const toggleTodo = (todoId) => {
+    const toggledTodos = todos.map((todo) => {
+      if (todo.id !== todoId) return todo;
+
+      return { ...todo, isCompleted: !todo.isCompleted };
+    });
+
+    setTodos(toggledTodos);
   };
 
   return (
@@ -79,7 +112,14 @@ function TodoWidget() {
 
       <div className="todos-wrapper">
         {todos.map((todo) => (
-          <TodoItem key={todo.id} todo={todo} />
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            setTodos={setTodos}
+            todos={todos}
+            onDelete={deleteTodo}
+            onToggle={toggleTodo}
+          />
         ))}
       </div>
     </div>
