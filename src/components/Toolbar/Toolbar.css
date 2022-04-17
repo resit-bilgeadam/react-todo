@@ -1,0 +1,98 @@
+.toolbar {
+  background-color: slateblue;
+  box-shadow: 0 2px 4px -2px slategray;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.brand-logo,
+.toolbar-link,
+.hamburger-btn {
+  color: snow;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 15px 30px;
+  transition: 150ms;
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo:hover,
+.toolbar-link:hover,
+.hamburger-btn:hover {
+  background-color: royalblue;
+}
+
+.brand-logo {
+  font-size: 21px;
+}
+
+.hamburger-btn {
+  display: none;
+  position: relative;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 100%;
+  list-style-type: none;
+  width: 100%;
+  background-color: snow;
+  box-shadow: 0 2px 4px -2px slategray;
+  display: none;
+}
+
+.bar {
+  display: block;
+  background-color: snow;
+  height: 3px;
+  border-radius: 4px;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bar:first-child {
+  transform: translateY(calc(-50% - 10px));
+}
+
+.bar:last-child {
+  transform: translateY(calc(-50% + 10px));
+}
+
+.toolbar-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.toolbar-item {
+  display: flex;
+}
+
+@media screen and (max-width: 750px) {
+  .toolbar-list {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .toolbar-link {
+    display: block;
+    width: 100%;
+    color: slateblue;
+  }
+
+  .toolbar-link:hover {
+    background-color: royalblue;
+    color: snow;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
