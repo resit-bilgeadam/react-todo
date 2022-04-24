@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import s from "./TodoWidget.module.css";
+import s from "./TodoWidget.module.scss";
 import Input from "../Input";
 import Button from "../Button";
 

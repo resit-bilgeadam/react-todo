@@ -1,0 +1,6 @@
+@import "./assets/styles/variables.scss";
+
+.container {
+  max-width: $containerWidth;
+  margin: auto;
+}

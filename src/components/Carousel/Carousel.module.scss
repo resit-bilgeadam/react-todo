@@ -1,13 +1,15 @@
+@import "../../assets/styles/variables.scss";
+
 .carousel {
   height: 450px;
-  background-color: slategray;
+  background-color: $gray;
   position: relative;
-}
 
-.carouselImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  & .carouselImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .prevWrapper,
@@ -29,14 +31,13 @@
 }
 .prevBtn,
 .nextBtn {
-  padding: 20px 30px;
-  border-radius: 4px;
+  padding: $md-space $xl-space;
+  border-radius: $radius;
   border: none;
   cursor: pointer;
-  transition: 150ms;
-}
+  transition: $transition;
 
-.prevBtn:hover,
-.nextBtn:hover {
-  background-color: linen;
+  &:hover {
+    background-color: $light;
+  }
 }

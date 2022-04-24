@@ -1,4 +1,4 @@
-import s from "./App.module.css";
+import s from "./App.module.scss";
 import React from "react";
 import Counter from "./components/Counter";
 import TodoWidget from "./components/TodoWidget";
@@ -19,10 +19,6 @@ function App() {
       <Carousel images={images} />
 
       <div className={s.container}>
-        <div className="card">
-          <button className="btn primary">Click me!</button>
-        </div>
-
         <Counter />
 
         <TodoWidget />

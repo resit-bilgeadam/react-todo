@@ -1,0 +1,30 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.btn {
+  transition: $transition;
+  padding: $sm-space $md-space;
+  border-radius: $radius;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $gray;
+  }
+}
+
+.primary {
+  @include btnColor($primary, $white);
+}
+
+.secondary {
+  @include btnColor($secondary, $light);
+}
+
+.danger {
+  @include btnColor($danger, $white);
+}
+
+.success {
+  @include btnColor($success, $light);
+}

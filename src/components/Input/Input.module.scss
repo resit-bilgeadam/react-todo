@@ -1,0 +1,17 @@
+@import "../../assets/styles/variables.scss";
+
+.formGroup {
+  margin: $lg-space;
+}
+
+.label {
+  font-weight: normal;
+  font-size: 18px;
+}
+.input {
+  display: block;
+  border-radius: $radius;
+  padding: $sm-space $md-space;
+  font-size: 16px;
+  margin-top: $sm-space;
+}

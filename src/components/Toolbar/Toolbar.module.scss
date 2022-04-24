@@ -1,6 +1,8 @@
+@import "../../assets/styles/variables.scss";
+
 .toolbar {
-  background-color: slateblue;
-  box-shadow: 0 2px 4px -2px slategray;
+  background-color: $primary;
+  box-shadow: 0 2px 4px -2px $gray;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -9,11 +11,11 @@
 .brandLogo,
 .toolbarLink,
 .hamburgerBtn {
-  color: snow;
+  color: $white;
   text-decoration: none;
   font-size: 16px;
-  padding: 15px 30px;
-  transition: 150ms;
+  padding: $md-space $xl-space;
+  transition: $transition;
   display: flex;
   align-items: center;
 }
@@ -21,7 +23,7 @@
 .brandLogo:hover,
 .toolbarLink:hover,
 .hamburgerBtn:hover {
-  background-color: royalblue;
+  background-color: darken($primary, 5%);
 }
 
 .brandLogo {
@@ -38,16 +40,16 @@
   top: 100%;
   list-style-type: none;
   width: 100%;
-  background-color: snow;
-  box-shadow: 0 2px 4px -2px slategray;
+  background-color: $white;
+  box-shadow: 0 2px 4px -2px $gray;
   display: none;
 }
 
 .bar {
   display: block;
-  background-color: snow;
+  background-color: $white;
   height: 3px;
-  border-radius: 4px;
+  border-radius: $radius;
   position: absolute;
   left: 10px;
   right: 10px;
@@ -84,12 +86,12 @@
   .toolbarLink {
     display: block;
     width: 100%;
-    color: slateblue;
+    color: $primary;
   }
 
   .toolbarLink:hover {
-    background-color: royalblue;
-    color: snow;
+    background-color: darken($primary, 5%);
+    color: $white;
   }
 
   .hamburgerMenu {

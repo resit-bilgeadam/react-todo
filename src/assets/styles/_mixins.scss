@@ -1,0 +1,8 @@
+@mixin btnColor($bgColor, $textColor) {
+  background-color: $bgColor;
+  color: $textColor;
+
+  &:hover {
+    background-color: darken($bgColor, 5%);
+  }
+}

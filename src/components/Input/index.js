@@ -1,4 +1,4 @@
-import s from "./Input.module.css";
+import s from "./Input.module.scss";
 
 function Input({ id, label, placeholder, type = "text", handleChange, value }) {
   return (

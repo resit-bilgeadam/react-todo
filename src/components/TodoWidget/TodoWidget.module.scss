@@ -1,3 +1,5 @@
+@import "../../assets/styles/variables.scss";
+
 .formWrapper {
   width: 440px;
   margin: auto;
@@ -5,16 +7,16 @@
 
 .todosWrapper {
   display: grid;
-  grid-gap: 15px;
+  grid-gap: $md-space;
   grid-template-columns: repeat(4, 1fr);
   margin: 40px 0;
 }
 
 .card {
-  border-radius: 4px;
-  border: 1px solid slategray;
-  box-shadow: 0 2px 4px -2px slategray;
-  padding: 20px;
+  border-radius: $radius;
+  border: 1px solid $gray;
+  box-shadow: 0 2px 4px -2px $gray;
+  padding: $lg-space;
 }
 
 .cardTitle {
@@ -23,18 +25,18 @@
 }
 
 .cardActions {
-  margin-top: 15px;
+  margin-top: $md-space;
 }
 
 .cardMessage {
   font-size: 18px;
-  margin-top: 10px;
+  margin-top: $sm-space;
 }
 
 .success {
-  color: green;
+  color: $success;
 }
 
 .error {
-  color: crimson;
+  color: $danger;
 }

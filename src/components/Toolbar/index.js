@@ -1,4 +1,4 @@
-import s from "./Toolbar.module.css";
+import s from "./Toolbar.module.scss";
 import { useState } from "react";
 
 function ToolbarItem({ children, to }) {

@@ -1,4 +1,4 @@
-import styles from "./Button.module.css";
+import styles from "./Button.module.scss";
 
 function Button({ children, handleClick, color = "primary", type = "button" }) {
   const classes = `${styles.btn} ${styles[color]}`;
