@@ -1,13 +1,13 @@
-import "./Input.css";
+import s from "./Input.module.css";
 
 function Input({ id, label, placeholder, type = "text", handleChange, value }) {
   return (
-    <div className="form-group">
-      <label className="label" htmlFor={id}>
+    <div className={s.formGroup}>
+      <label className={s.label} htmlFor={id}>
         {label}
       </label>
       <input
-        className="input"
+        className={s.input}
         id={id}
         placeholder={placeholder}
         type={type}

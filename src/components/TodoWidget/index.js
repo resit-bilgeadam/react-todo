@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./TodoWidget.css";
+import s from "./TodoWidget.module.css";
 import Input from "../Input";
 import Button from "../Button";
 
@@ -28,16 +28,16 @@ function TodoItem({ todo, onDelete, onToggle }) {
   const messageClass = todo.isCompleted ? "success" : "error";
 
   return (
-    <div className="card">
-      <h6 className="card-title">{todo.title}</h6>
+    <div className={s.card}>
+      <h6 className={s.cardTitle}>{todo.title}</h6>
 
       <p>{todo.text}</p>
 
-      <p className={`card-message ${messageClass}`}>
+      <p className={`${s.cardMessage} ${s[messageClass]}`}>
         {todo.isCompleted ? "Completed" : "Not Completed!"}
       </p>
 
-      <div className="card-actions">
+      <div className={s.cardActions}>
         <Button color="danger" handleClick={() => onDelete(todo.id)}>
           Delete
         </Button>
@@ -86,7 +86,7 @@ function TodoWidget() {
     <div>
       <h2>Todo Widget</h2>
 
-      <div className="card form-wrapper">
+      <div className={`${s.card} ${s.formWrapper}`}>
         <form onSubmit={addTodo}>
           <Input
             label="Todo Title"
@@ -110,13 +110,11 @@ function TodoWidget() {
         </form>
       </div>
 
-      <div className="todos-wrapper">
+      <div className={s.todosWrapper}>
         {todos.map((todo) => (
           <TodoItem
             key={todo.id}
             todo={todo}
-            setTodos={setTodos}
-            todos={todos}
             onDelete={deleteTodo}
             onToggle={toggleTodo}
           />

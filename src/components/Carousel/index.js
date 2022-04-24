@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Carousel.css";
+import s from "./Carousel.module.css";
 
 function Carousel({ images }) {
   const [imgIndex, setImgIndex] = useState(0);
@@ -19,17 +19,17 @@ function Carousel({ images }) {
   };
 
   return (
-    <div className="carousel">
-      <img className="carousel-img" src={selectedImg} />
+    <div className={s.carousel}>
+      <img className={s.carouselImg} src={selectedImg} />
 
-      <div className="prev-wrapper">
-        <button className="prev-btn" onClick={prevSlide}>
+      <div className={s.prevWrapper}>
+        <button className={s.prevBtn} onClick={prevSlide}>
           PREV
         </button>
       </div>
 
-      <div className="next-wrapper">
-        <button className="next-btn" onClick={nextSlide}>
+      <div className={s.nextWrapper}>
+        <button className={s.nextBtn} onClick={nextSlide}>
           NEXT
         </button>
       </div>

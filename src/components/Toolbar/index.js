@@ -1,10 +1,10 @@
-import "./Toolbar.css";
+import s from "./Toolbar.module.css";
 import { useState } from "react";
 
 function ToolbarItem({ children, to }) {
   return (
-    <li className="toolbar-item">
-      <a className="toolbar-link" href={to}>
+    <li className={s.toolbarItem}>
+      <a className={s.toolbarLink} href={to}>
         {children}
       </a>
     </li>
@@ -19,19 +19,19 @@ function Toolbar() {
   };
 
   return (
-    <nav className="toolbar">
-      <a className="brand-logo" href="#">
+    <nav className={s.toolbar}>
+      <a className={s.brandLogo} href="#">
         React App
       </a>
 
-      <a onClick={toggleHamburger} className="hamburger-btn" href="#">
+      <a onClick={toggleHamburger} className={s.hamburgerBtn} href="#">
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
       </a>
 
       {isHamburgerVisible ? (
-        <ul className="hamburger-menu">
+        <ul className={s.hamburgerMenu}>
           <ToolbarItem to="#">Home</ToolbarItem>
 
           <ToolbarItem to="#">About</ToolbarItem>
@@ -40,7 +40,7 @@ function Toolbar() {
         </ul>
       ) : null}
 
-      <ul className="toolbar-list">
+      <ul className={s.toolbarList}>
         <ToolbarItem to="#">Home</ToolbarItem>
 
         <ToolbarItem to="#">About</ToolbarItem>

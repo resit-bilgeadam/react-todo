@@ -1,4 +1,4 @@
-import "./Title.css";
+import s from "./Title.module.css";
 
 function Title(props) {
   const style = {
@@ -6,7 +6,7 @@ function Title(props) {
   };
 
   return (
-    <h1 className={`title ${props.background}`} style={style}>
+    <h1 className={`${s.title} ${s[props.background]}`} style={style}>
       {props.children} - {4 - 3}
     </h1>
   );

@@ -1,9 +1,9 @@
-.form-wrapper {
+.formWrapper {
   width: 440px;
   margin: auto;
 }
 
-.todos-wrapper {
+.todosWrapper {
   display: grid;
   grid-gap: 15px;
   grid-template-columns: repeat(4, 1fr);
@@ -17,16 +17,16 @@
   padding: 20px;
 }
 
-.card-title {
+.cardTitle {
   font-weight: normal;
   font-size: 21px;
 }
 
-.card-actions {
+.cardActions {
   margin-top: 15px;
 }
 
-.card-message {
+.cardMessage {
   font-size: 18px;
   margin-top: 10px;
 }
