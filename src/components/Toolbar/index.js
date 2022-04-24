@@ -1,12 +1,13 @@
 import s from "./Toolbar.module.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function ToolbarItem({ children, to }) {
   return (
     <li className={s.toolbarItem}>
-      <a className={s.toolbarLink} href={to}>
+      <Link className={s.toolbarLink} to={to}>
         {children}
-      </a>
+      </Link>
     </li>
   );
 }
@@ -20,9 +21,9 @@ function Toolbar() {
 
   return (
     <nav className={s.toolbar}>
-      <a className={s.brandLogo} href="#">
+      <Link className={s.brandLogo} to="/">
         React App
-      </a>
+      </Link>
 
       <a onClick={toggleHamburger} className={s.hamburgerBtn} href="#">
         <span className="bar"></span>
@@ -32,20 +33,20 @@ function Toolbar() {
 
       {isHamburgerVisible ? (
         <ul className={s.hamburgerMenu}>
-          <ToolbarItem to="#">Home</ToolbarItem>
+          <ToolbarItem to="/">Home</ToolbarItem>
 
-          <ToolbarItem to="#">About</ToolbarItem>
+          <ToolbarItem to="/counter">Counter</ToolbarItem>
 
-          <ToolbarItem to="#">Contact Us</ToolbarItem>
+          <ToolbarItem to="/todo-widget">Todo Widget</ToolbarItem>
         </ul>
       ) : null}
 
       <ul className={s.toolbarList}>
-        <ToolbarItem to="#">Home</ToolbarItem>
+        <ToolbarItem to="/">Home</ToolbarItem>
 
-        <ToolbarItem to="#">About</ToolbarItem>
+        <ToolbarItem to="/counter">Counter</ToolbarItem>
 
-        <ToolbarItem to="#">Contact Us</ToolbarItem>
+        <ToolbarItem to="/todo-widget">Todo Widget</ToolbarItem>
       </ul>
     </nav>
   );
